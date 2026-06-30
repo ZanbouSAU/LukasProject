@@ -1,0 +1,47 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:conv="using:NasClientDesktop.Converters"
+             x:Class="NasClientDesktop.App"
+             RequestedThemeVariant="Dark">
+
+    <Application.Resources>
+        <!-- ============================================================
+             设计令牌 —— 「深港夜色 × 铜线」
+             底色取深蓝黑的机房夜色，强调色取 PCB 铜线的暖铜。
+             文件系统素材（路径/文件名/大小/时间）一律等宽字体。
+             ============================================================ -->
+        <Color x:Key="BgColor">#0F141E</Color>
+        <Color x:Key="PanelColor">#151C2A</Color>
+        <Color x:Key="Panel2Color">#1A2333</Color>
+        <Color x:Key="LineColor">#26304A</Color>
+        <Color x:Key="InkColor">#D9E0EE</Color>
+        <Color x:Key="InkMutedColor">#8A94AB</Color>
+        <Color x:Key="InkFaintColor">#5C6680</Color>
+        <Color x:Key="CopperColor">#D98E4A</Color>
+        <Color x:Key="CopperBrightColor">#E9A766</Color>
+        <Color x:Key="DangerColor">#E0685C</Color>
+        <Color x:Key="OkColor">#6FBF9A</Color>
+
+        <SolidColorBrush x:Key="Bg" Color="{StaticResource BgColor}"/>
+        <SolidColorBrush x:Key="Panel" Color="{StaticResource PanelColor}"/>
+        <SolidColorBrush x:Key="Panel2" Color="{StaticResource Panel2Color}"/>
+        <SolidColorBrush x:Key="Line" Color="{StaticResource LineColor}"/>
+        <SolidColorBrush x:Key="Ink" Color="{StaticResource InkColor}"/>
+        <SolidColorBrush x:Key="InkMuted" Color="{StaticResource InkMutedColor}"/>
+        <SolidColorBrush x:Key="InkFaint" Color="{StaticResource InkFaintColor}"/>
+        <SolidColorBrush x:Key="Copper" Color="{StaticResource CopperColor}"/>
+        <SolidColorBrush x:Key="CopperBright" Color="{StaticResource CopperBrightColor}"/>
+        <SolidColorBrush x:Key="Danger" Color="{StaticResource DangerColor}"/>
+        <SolidColorBrush x:Key="Ok" Color="{StaticResource OkColor}"/>
+
+        <FontFamily x:Key="MonoFont">avares://NasClientDesktop/Assets/Fonts/JetBrainsMono-Regular.ttf#JetBrains Mono</FontFamily>
+
+        <!-- 转换器 -->
+        <conv:PreviewKindConverter x:Key="PreviewKind"/>
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="/Styles/Controls.axaml"/>
+    </Application.Styles>
+</Application>
